@@ -1,13 +1,17 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
+import setup from "../../utils/test/testUtils";
 import AccountGroup from "./AccountGroup";
 import accountGroups from "../../data/accountGroups";
 
 const group = accountGroups[0];
 
 describe("AccountGroup", () => {
+  beforeEach(() => {
+    setup(<AccountGroup group={group} />);
+  });
+
   describe("When loaded", () => {
     test("Displays the group title and group total", () => {
-      render(<AccountGroup group={group} />);
       const groupName = screen.getByText(group.title);
       expect(groupName).toBeInTheDocument();
 
@@ -16,8 +20,6 @@ describe("AccountGroup", () => {
     });
 
     test("And Displays the account names and account totals", () => {
-      render(<AccountGroup group={group} />);
-
       group.accounts.forEach((a) => {
         const accountName = screen.getByText(a.name);
         expect(accountName).toBeInTheDocument();
