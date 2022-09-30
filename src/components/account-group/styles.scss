@@ -1,9 +1,8 @@
 .groupContainer {
-  flex: 1;
   -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
   box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
 
   .groupHeader {
     display: flex;
@@ -21,19 +20,13 @@
 
 ul {
   list-style: none;
+  margin-left: 0;
+  padding-left: 0;
 
   li {
     display: flex;
     text-align: left;
     justify-content: space-between;
+    margin: 0;
   }
-}
-
-.storybook-container {
-  font-family: "Roboto";
-  display: flex;
-}
-
-.storybook-content {
-  flex: 6;
 }

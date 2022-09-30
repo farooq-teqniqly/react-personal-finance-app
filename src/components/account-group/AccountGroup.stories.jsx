@@ -1,7 +1,7 @@
 import React from "react";
 import AccountGroup from "./AccountGroup";
 import accountGroups from "../../data/accountGroups";
-import "./styles.scss";
+import "./storybook-styles.scss";
 
 const config = {
   title: "AccountGroup",
@@ -13,7 +13,9 @@ export default config;
 const Template = (args) => (
   <>
     <div className="storybook-container">
-      <AccountGroup {...args}></AccountGroup>
+      <div className="storybook-account-group">
+        <AccountGroup {...args}></AccountGroup>
+      </div>
       <div className="storybook-content"></div>
     </div>
   </>

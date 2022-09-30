@@ -11,7 +11,7 @@ describe("AccountGroup", () => {
       const groupName = screen.getByText(group.title);
       expect(groupName).toBeInTheDocument();
 
-      const groupTotal = screen.getByText(`$ ${group.total}`);
+      const groupTotal = screen.getByText(group.total);
       expect(groupTotal).toBeInTheDocument();
     });
 
@@ -19,8 +19,11 @@ describe("AccountGroup", () => {
       render(<AccountGroup group={group} />);
 
       group.accounts.forEach((a) => {
-        const element = screen.getByText(a.name);
-        expect(element).toBeInTheDocument();
+        const accountName = screen.getByText(a.name);
+        expect(accountName).toBeInTheDocument();
+
+        const accountTotal = screen.getByText(a.total);
+        expect(accountTotal).toBeInTheDocument();
       });
     });
   });
