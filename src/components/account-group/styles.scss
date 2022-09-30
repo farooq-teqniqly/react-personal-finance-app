@@ -1,0 +1,39 @@
+.groupContainer {
+  flex: 1;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  padding: 20px;
+  border-radius: 20px;
+
+  .groupHeader {
+    display: flex;
+    justify-content: space-between;
+
+    .groupTitle {
+      font-weight: bold;
+    }
+
+    .groupTotal {
+      font-weight: bold;
+    }
+  }
+}
+
+ul {
+  list-style: none;
+
+  li {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+  }
+}
+
+.storybook-container {
+  font-family: "Roboto";
+  display: flex;
+}
+
+.storybook-content {
+  flex: 6;
+}
