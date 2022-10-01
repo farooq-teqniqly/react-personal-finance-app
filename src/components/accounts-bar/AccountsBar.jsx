@@ -8,8 +8,8 @@ import AccountGroup from "../account-group/AccountGroup";
 function AccountsBar({ accountGroups }) {
   return (
     <div className="storybook-container">
-      <div className="storybook-sidebar">
-        <div className="accountsBar">
+      <div className="accountsBar">
+        <div className="header">
           <div className="icon">
             <Tooltip title="Refresh all accounts">
               <RefreshOutlinedIcon></RefreshOutlinedIcon>
@@ -21,13 +21,15 @@ function AccountsBar({ accountGroups }) {
             </Tooltip>
           </div>
         </div>
-        <div className="storybook-accountGroups">
+        <div className="groups">
           {accountGroups.map((g) => (
-            <AccountGroup key={g.title} group={g}></AccountGroup>
+            <div className="group">
+              <AccountGroup key={g.title} group={g}></AccountGroup>
+            </div>
           ))}
         </div>
+        <div className="storybook-content"></div>
       </div>
-      <div className="storybook-content"></div>
     </div>
   );
 }
