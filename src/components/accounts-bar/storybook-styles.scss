@@ -2,6 +2,10 @@
   font-family: "Roboto";
   display: flex;
 
+  .storybook-accountsBar {
+    flex: 2;
+  }
+
   .storybook-content {
     flex: 6;
   }

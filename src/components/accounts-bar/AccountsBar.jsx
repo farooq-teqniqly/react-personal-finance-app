@@ -7,28 +7,25 @@ import AccountGroup from "../account-group/AccountGroup";
 
 function AccountsBar({ accountGroups }) {
   return (
-    <div className="storybook-container">
-      <div className="accountsBar">
-        <div className="header">
-          <div className="icon">
-            <Tooltip title="Refresh all accounts">
-              <RefreshOutlinedIcon></RefreshOutlinedIcon>
-            </Tooltip>
-          </div>
-          <div className="icon">
-            <Tooltip title="Manage accounts...">
-              <AccountBalanceOutlinedIcon></AccountBalanceOutlinedIcon>
-            </Tooltip>
-          </div>
+    <div className="accountsBar">
+      <div className="header">
+        <div className="icon">
+          <Tooltip title="Refresh all accounts">
+            <RefreshOutlinedIcon></RefreshOutlinedIcon>
+          </Tooltip>
         </div>
-        <div className="groups">
-          {accountGroups.map((g) => (
-            <div className="group">
-              <AccountGroup key={g.title} group={g}></AccountGroup>
-            </div>
-          ))}
+        <div className="icon">
+          <Tooltip title="Manage accounts...">
+            <AccountBalanceOutlinedIcon></AccountBalanceOutlinedIcon>
+          </Tooltip>
         </div>
-        <div className="storybook-content"></div>
+      </div>
+      <div className="groups">
+        {accountGroups.map((g) => (
+          <div key={g.title} className="group">
+            <AccountGroup group={g}></AccountGroup>
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -10,7 +10,14 @@ const config = {
 
 export default config;
 
-const Template = (args) => <AccountsBar {...args}></AccountsBar>;
+const Template = (args) => (
+  <div className="storybook-container">
+    <div className="storybook-accountsBar">
+      <AccountsBar {...args}></AccountsBar>
+    </div>
+    <div className="storybook-content"></div>
+  </div>
+);
 
 export const Default = Template.bind({});
 

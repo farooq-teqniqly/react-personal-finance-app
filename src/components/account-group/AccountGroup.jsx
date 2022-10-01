@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.scss";
+import BalanceAmount from "../balance-amount/BalanceAmount";
 
 function AccountGroup({ group }) {
   return (
@@ -11,9 +12,9 @@ function AccountGroup({ group }) {
       <div>
         <ul>
           {group.accounts.map((a) => (
-            <li key={a.name}>
-              <span className="accountName">{a.name}</span>
-              <span className="accountTotal">{a.total}</span>
+            <li className="account" key={a.name}>
+              <span>{a.name}</span>
+              <BalanceAmount amount={a.total}></BalanceAmount>
             </li>
           ))}
         </ul>
