@@ -1,0 +1,18 @@
+.storybook-container {
+  font-family: "Roboto";
+  display: flex;
+
+  .storybook-sidebar {
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .storybook-content {
+    flex: 6;
+  }
+
+  .storybook-accountGroups {
+    display: flex;
+    flex-direction: column;
+  }
+}

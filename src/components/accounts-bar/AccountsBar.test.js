@@ -1,12 +1,13 @@
 import { screen } from "@testing-library/react";
 import setup from "../../utils/test/testUtils";
 import AccountsBar from "./AccountsBar";
+import accountGroups from "../../data/accountGroups";
 
 describe("AccountsBar", () => {
   let testSetup = {};
 
   beforeEach(() => {
-    testSetup = setup(<AccountsBar />);
+    testSetup = setup(<AccountsBar accountGroups={accountGroups} />);
   });
 
   describe("When loaded", () => {
