@@ -4,7 +4,7 @@ import "./styles.scss";
 function Header() {
   return (
     <div className="header">
-      <div class="appName">Slicken</div>
+      <div className="appName">Slicken</div>
     </div>
   );
 }
