@@ -9,17 +9,10 @@ const config = {
 
 export default config;
 
-const Template = (args) => (
-  <div className="storybook-container">
-    <Avatar {...args}></Avatar>
-  </div>
-);
+const Template = (args) => <Avatar {...args}></Avatar>;
 
 export const Default = Template.bind({});
 
 Default.args = {
-  config: {
-    url: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg",
-    width: 100,
-  },
+  url: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg",
 };

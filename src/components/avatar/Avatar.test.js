@@ -6,15 +6,10 @@ import Avatar from "./Avatar";
 
 describe("Avatar", () => {
   test("Loads expected image", () => {
-    const config = {
-      url: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg",
-      width: 50,
-    };
-
-    const { container } = render(<Avatar config={config}></Avatar>);
+    const url =
+      "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg";
+    const { container } = render(<Avatar url={url}></Avatar>);
     const img = container.querySelector("img");
-    expect(img.src).toContain(config.url);
-    expect(img.height).toBe(config.width);
-    expect(img.width).toBe(config.width);
+    expect(img.src).toContain(url);
   });
 });

@@ -1,9 +1,21 @@
 .header {
   background-color: rgb(211, 204, 204);
+  display: flex;
+  align-items: center;
 
   .appName {
     padding: 20px;
     font-weight: bold;
     font-size: x-large;
+  }
+
+  .item {
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+  }
+
+  .avatar {
+    width: 50;
   }
 }

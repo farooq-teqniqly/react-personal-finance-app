@@ -1,16 +1,10 @@
 import React from "react";
 import "./styles.scss";
 
-function Avatar({ config }) {
+function Avatar({ url }) {
   return (
     <div>
-      <img
-        src={config.url}
-        width={config.width}
-        height={config.width}
-        alt=""
-        className="avatar"
-      ></img>
+      <img src={url} alt="" className="avatar"></img>
     </div>
   );
 }
