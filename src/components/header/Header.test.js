@@ -15,7 +15,6 @@ describe("Header", () => {
 
   beforeEach(() => {
     testSetup = setup(<Header avatarUrl={avatarUrl} />);
-    console.log(testSetup);
   });
 
   test("Contains app name", () => {
